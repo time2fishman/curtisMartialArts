@@ -1519,10 +1519,19 @@ input, select, textarea {
 
 		#header > .container {
 			position: relative;
-			min-height: 155px;
+			/* min-height: 155px; */
+			display: flex;
+			align-items: center;
+
 		}
 
-		#header h1 {
+		.logo {
+			width: 300px;
+			padding-right: 25px;
+			padding-top: 15px;
+		}
+
+		/* #header h1 {
 			position: absolute;
 			left: 0;
 			bottom: 35px;
@@ -1532,7 +1541,7 @@ input, select, textarea {
 			#header h1 a {
 				color: #fff;
 				text-decoration: none;
-			}
+			} */
 
 		#header nav {
 			position: absolute;
@@ -1567,6 +1576,7 @@ input, select, textarea {
 	}
 
 		#banner .bordered-feature-image {
+			cursor: default;
 			margin-bottom: 0;
 		}
 
@@ -1685,10 +1695,10 @@ input, select, textarea {
 /* Copyright */
 
 	#copyright {
-		border-top: solid 1px #b5bec3;
-		box-shadow: inset 0px 1px 0px 0px #e0e4e7;
+		/* border-top: solid 1px #b5bec3; */
+		/* box-shadow: inset 0px 1px 0px 0px #e0e4e7; */
 		text-align: center;
-		padding: 45px 0 80px 0;
+		/* padding: 45px 0 0px 0; */
 		color: #8d9ca3;
 		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
 	}
