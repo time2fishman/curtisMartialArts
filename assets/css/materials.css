@@ -1,0 +1,20 @@
+.col-12-medium {
+  height: max-content;
+}
+
+.col-12-medium img {
+  width: 100%;
+}
+
+#gi-img {
+  border: 3px double black;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 981px) {
+  #content #knowledge-question-docs {
+    position: fixed;
+    height: max-content;
+  }
+}
