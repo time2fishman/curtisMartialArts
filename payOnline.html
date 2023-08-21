@@ -12,6 +12,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/payOnline.css">
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=ATcFvDFB6lqF289sn3pCNRSEQA-tvhRCXVFQ_sKPyyZjPwuvKE3Vp-zwSUnMNGH9XzdTNbDz6KiyKlUd&components=buttons"></script>
+  <!-- <link rel="stylesheet" href="/style.css"> -->
+  <script src="/script.js"></script>
 </head>
 
 <body class="subpage">
@@ -24,14 +28,14 @@
           <div class="col-12">
 
             <!-- Logo -->
-            <a href="index.html"><img id="logo" src="/images/main-logo.png" alt="Curtis' Martial Arts logo"></a>
+            <a href="/index.html"><img id="logo" src="/images/main-logo.png" alt="Curtis' Martial Arts logo"></a>
 
             <!-- Nav -->
             <nav id="nav">
-              <a href="instructors.html">Instructors</a>
-              <a href="calendar.html">Calendar</a>
-              <a href="materials.html">Materials</a>
-              <a href="#">Pay Online</a>
+              <a href="/instructors.html">Instructors</a>
+              <a href="/calendar.html">Calendar</a>
+              <a href="/materials.html">Materials</a>
+              <a href="/payOnline.html">Pay Online</a>
             </nav>
 
           </div>
@@ -58,7 +62,7 @@
                   </th>
                   <th>New Students</th>
                 </tr>
-                <tr>
+                <tr id="table-row-2">
                   <td>One Student $75.00</td>
                   <td>White-Red/Black $20.00</td>
                   <td class="no-padding">Registration Fee $120.00</td>
@@ -70,23 +74,24 @@
                 </tr>
               </table>
               <br>
-              <p>When possible, please combine payments. For example, tuition and test fees in the same transaction.
+              <p class="payment-note">When possible, please combine payments. For example, tuition and test fees in the same transaction.
                 Thank you!</p>
-              
-              <form action="">
-                <label for="">Name of Student(s)</label><br>
-                <input type="text"><br>
-                <label for="">Total Payment ($)</label><br>
-                <input type="text"><br>
-                <label for="">Description (e.g. January tuition, Registration, T-shirt)</label><br>
-                <input type="text"><br>
-                <button>PayPal</button><br>
-                <button>Venmo</button><br>
-                <button>Debit or Credit Card</button>
-              </form>
 
+              <!-- <FORM action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <label for="">Name</label>
+              <input type="text">
+              <label for="">Description</label>
+              <input type="text">
+              <label for="">Total Amount ($)</label>
+              <input type="number">
+            </FORM> -->
+
+              <!-- PayPal -->
+              <div class="paylpal-container">
+                <div id="alerts"></div>
+                <div id="payment_options"></div>
+              </div>
             </section>
-            
 
           </div>
         </div>
@@ -177,7 +182,6 @@
 
   </div>
 
-  <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
