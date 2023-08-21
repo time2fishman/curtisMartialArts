@@ -37,12 +37,8 @@ td {
 
 .ms-alert {
   color: white;
-  /* padding: 10px; */
-  /* border: 1px solid black; */
   text-align: center;
   border-radius: 5px;
-  /* margin: 1em 0 2em 0; */
-  /* width: auto; */
 }
 
 .ms-action {
@@ -56,10 +52,9 @@ td {
 .ms-action2 {
   background-color: #f8dec6;
   color: #f87400;
-  /* opacity: .75; */
   padding: 10px;
   margin: 0.5em 0 2em 0;
-  min-width: 400px;
+  min-width: 250px;
   max-width: 100%;
 }
 
