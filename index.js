@@ -25,6 +25,8 @@ const endpoint_url = environment === 'sandbox' ? 'https://api-m.sandbox.paypal.c
  * @throws {Error} If there is an error creating the order.
  */
 app.post('/create_order', (req, res) => {
+
+    console.log(req.body)
     get_access_token()
         .then(access_token => {
             let order_data_json = {
@@ -32,9 +34,11 @@ app.post('/create_order', (req, res) => {
                 'purchase_units': [{
                     'amount': {
                         'currency_code': 'USD',
-                        'value': '100.00'
-                    }
-                }]
+                        'value': req.body.total
+                    },
+                    'description': req.body.note,
+                    'custom_id': req.body.name
+                }],
             };
             const data = JSON.stringify(order_data_json)
 
@@ -71,9 +75,14 @@ app.post('/create_order', (req, res) => {
  * @throws {Error} If there is an error completing the order.
  */
 app.post('/complete_order', (req, res) => {
+
+
+    console.log(endpoint_url + '/v2/checkout/orders/' + req.body.order_id + '/' + req.body.intent + "?fields=payer/name/given_name,payer/name/surname,id,purchase_units/description,purchase_units/amount/value")
+    
     get_access_token()
         .then(access_token => {
-            fetch(endpoint_url + '/v2/checkout/orders/' + req.body.order_id + '/' + req.body.intent, {
+            console.log(access_token)
+            fetch(endpoint_url + '/v2/checkout/orders/' + req.body.order_id + '/' + req.body.intent + "?fields=payer/name/given_name,payer/name/surname,id,purchase_units/description,purchase_units/amount/value", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -92,8 +101,8 @@ app.post('/complete_order', (req, res) => {
         })
 });
 
+app.use(express.static('assets'));
 // Helper / Utility functions
-
 //Servers the index.html file
 app.get('/', (req, res) => {
     res.sendFile(process.cwd() + '/payOnline.html');

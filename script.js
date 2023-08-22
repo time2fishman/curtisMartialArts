@@ -47,9 +47,12 @@ url_to_head(paypal_sdk_url + "?client-id=" + client_id + "&enable-funding=venmo&
       },
 
       createOrder: function(data, actions) { //https://developer.paypal.com/docs/api/orders/v2/#orders_create
+        let name = document.getElementById("name").value;
+        let total = document.getElementById("amount").value;
+        let note = document.getElementById("note").value;
           return fetch("http://localhost:3000/create_order", {
               method: "post", headers: { "Content-Type": "application/json; charset=utf-8" },
-              body: JSON.stringify({ "intent": intent })
+              body: JSON.stringify({ "intent": intent, "name":name, "total":total, "note":note })
           })
           .then((response) => response.json())
           .then((order) => { return order.id; });
