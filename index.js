@@ -116,6 +116,11 @@ app.get('/script.js', (req, res) => {
     res.sendFile(process.cwd() + '/script.js');
 });
 
+//Just looking to use the payOnline.js file here. Not sure if all of this is necessary
+app.get('/assets/js/payOnline.js', (req, res) => {
+    res.sendFile(process.cwd() + '/assets/js/payOnline.js');
+});
+
 //PayPal Developer YouTube Video:
 //How to Retrieve an API Access Token (Node.js)
 //https://www.youtube.com/watch?v=HOkkbGSxmp4

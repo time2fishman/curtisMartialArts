@@ -38,7 +38,7 @@ td {
 }
 
 #paypal-btn-container {
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
@@ -46,6 +46,7 @@ td {
   color: white;
   text-align: center;
   border-radius: 5px;
+  display: block;
 }
 
 .ms-action {
