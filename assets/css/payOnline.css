@@ -30,8 +30,15 @@ td {
   margin-bottom: 3em;
 }
 
-.paylpal-container {
+#fields {
   display: grid;
+  justify-content: center;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+#paypal-btn-container {
+  display: flex;
   justify-content: center;
 }
 
@@ -56,9 +63,4 @@ td {
   margin: 0.5em 0 2em 0;
   min-width: 250px;
   max-width: 100%;
-}
-
-#payment_options {
-  display: grid;
-  justify-content: center;
 }

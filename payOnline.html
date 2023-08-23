@@ -10,8 +10,8 @@
   <title>Curtis' Martial Arts</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="/css/main.css" type="text/css" />
-  <link rel="stylesheet" href="/css/payOnline.css" type="text/css"/>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/payOnline.css" />
   <script src="/script.js"></script>
 </head>
 
@@ -71,34 +71,21 @@
                 </tr>
               </table>
               <br>
-              <p class="payment-note">When possible, please combine payments. For example, tuition and test fees in the same transaction.
+              <p class="payment-note">When possible, please combine payments. For example, tuition and test fees in the
+                same transaction.
                 Thank you!</p>
 
-              <div class="fields">
-									<div class="field">
-										<label for="name">Name of Students</label>
-										<input type="text" name="name" id="name">
-									</div>
-									<div class="field">
-										<label for="amount">Total Payment ($)</label>
-										<input type="text" name="amount" id="amount">
-									</div>
-									<div class="field">
-										<label for="note">Description</label>
-										<textarea name="note" id="note" rows="3"></textarea>
-									</div>
-								</div>
-              <!-- <FORM action="https://www.paypal.com/cgi-bin/webscr" method="post">
-              <label for="">Name</label>
-              <input type="text">
-              <label for="">Description</label>
-              <input type="text">
-              <label for="">Total Amount ($)</label>
-              <input type="number">
-            </FORM> -->
-
               <!-- PayPal -->
-              <div class="paylpal-container">
+              <div id="fields">
+                  <label for="name">Name of Student(s)</label>
+                  <input type="text" name="name" id="name" placeholder="Enter first and last name" required>
+                  <label for="amount">Total Payment ($)</label>
+                  <input type="number" name="amount" id="amount" placeholder="E.g. 25.95" required>
+                  <label for="note">Description</label>
+                  <textarea name="note" id="note" rows="3" placeholder="E.g. Black belt test, t-shirt, month/year tuition..." required></textarea>
+              </div>
+
+              <div id="paypal-btn-container">
                 <div id="alerts"></div>
                 <div id="payment_options"></div>
               </div>
@@ -122,11 +109,12 @@
 
   </div>
 
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/browser.min.js"></script>
-  <script src="/js/breakpoints.min.js"></script>
-  <script src="/js/util.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
 
 </body>
 
