@@ -1,5 +1,5 @@
 header {
-  padding: .5em 0;
+  padding: 0.5em 0;
 }
 h1 {
   font-size: 2em;
@@ -20,13 +20,6 @@ h2 {
   float: left;
   margin-right: 1.5em;
 }
-
-/* .instructor-img-right {
-  width: 40%;
-  float: right;
-  margin-left: 1em;
-} */
-
 
 /* Media Queries */
 
