@@ -2043,6 +2043,12 @@ section:last-child,
     -ms-transform: translateX(0);
     transform: translateX(0);
   }
+
+  #logo {
+    width: 150px;
+    padding-right: unset;
+    padding-top: unset;
+  }
 }
 
 /* Small */
@@ -2070,6 +2076,12 @@ section:last-child,
 
   .check-list li {
     font-size: 1em;
+  }
+
+  #logo {
+    width: 150px;
+    padding-right: unset;
+    padding-top: unset;
   }
 
   .button-large {
