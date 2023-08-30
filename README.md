@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   
-  <img src="images/main-logo.png" alt="Logo" width="250" height="80">
+  <img src="images/mainLogo.svg" alt="Logo" width="250" height="80">
 
   <h3 align="center">Curtis' Martial Arts</h3>
 
