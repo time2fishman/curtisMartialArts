@@ -37,7 +37,8 @@ jobs:
         npm install
         # npm run-script build
       env:
-        ENVIRONMENT: ${{ vars.ENVIRONMENT ))
+        name: sandbox
+        ENVIRONMENT: ${{ vars.ENVIRONMENT }}
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         
