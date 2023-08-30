@@ -23,7 +23,7 @@
 			$(
 				'<div id="titleBar">' +
 					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
+					'<a href="index.html"><img src="images/mainLogo.svg" class="title" alt="Curtis\' Martial Arts logo"></a>' +
 				'</div>'
 			)
 				.appendTo($body);
