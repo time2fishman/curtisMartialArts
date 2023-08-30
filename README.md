@@ -7,7 +7,7 @@
   <h3 align="center">Curtis' Martial Arts</h3>
 
   <p align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://time2fishman.github.io/curtisMartialArts/">View Demo</a>
     ·
     <a href="https://github.com/time2fishman/curtisMartialArts/issues/new">Report Bug</a>
     ·
